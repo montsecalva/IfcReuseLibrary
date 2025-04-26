@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IFC Reuse Platform</title>
+    <title>Über uns</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css">
     <style>
         .dropdown-content {
             display: none;
@@ -46,7 +45,6 @@
                 <a href="about.html" class="text-[#F1FAEE] hover:text-[#4CAF50]">Über Uns</a>
             </nav>
         </div>
-
         <div class="dropdown relative">
             <button onclick="toggleDropdown(event)" class="text-[#F1FAEE] hover:text-[#4CAF50]">👤 Benutzer</button>
             <div class="dropdown-content bg-gray-700 rounded shadow-lg">
@@ -57,46 +55,29 @@
         </div>
     </header>
 
-    <section class="text-center mt-12">
-        <h2 class="text-4xl font-bold text-[#F1FAEE]">
-            Finde wiederverwendbare Bauteile für dein Projekt
-        </h2>
-        <p class="text-gray-400 mt-2">
-            Nachhaltiges Bauen durch digitale Katalogisierung von IFC-Bauteilen.
+    <section class="max-w-3xl mx-auto mt-12 bg-gray-800 p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold">Über uns</h2>
+        <p class="mt-2">
+            Willkommen bei der <b>IFC Reuse Platform</b>! Unser Ziel ist es, die Bauindustrie nachhaltiger zu gestalten, 
+            indem wir wiederverwendbare Bauteile aus IFC-Modellen extrahieren und katalogisieren.
         </p>
+
+        <h3 class="text-lg font-semibold mt-4">Unser Team</h3>
+        <p>
+            Hier kannst du Infos über dein Team, eure Vision und eure Motivation ergänzen.
+        </p>
+
+        <h3 class="text-lg font-semibold mt-4">Unsere Mission</h3>
+        <p>
+            Unser Ziel ist es, Architekten und Bauherren zu unterstützen, nachhaltigere Entscheidungen zu treffen. 
+            Mit unserer Plattform können Bauteile einfacher wiederverwendet werden, was Ressourcen spart und Kosten senkt.
+        </p>
+
+        <h3 class="text-lg font-semibold mt-4">Kontakt</h3>
+        <p>📧 <b>Email:</b> kontakt@ifc-reuse.com</p>
+        <p>📍 <b>Standort:</b> Augsburg, Deutschland</p>
     </section>
-
-    <div class="mt-6 flex justify-center">
-        <input type="text" placeholder="Suche nach Material, Größe, Standort..."
-            class="w-1/2 border border-gray-600 bg-gray-700 text-[#F1FAEE] rounded-lg p-2">
-        <button class="ml-2 bg-[#4CAF50] text-white px-4 py-2 rounded-lg">🔍</button>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 px-6">
-        <a href="upload.html" class="bg-gray-800 shadow-md rounded-xl p-6 text-center hover:shadow-lg transition">
-            <span class="text-blue-400 text-4xl">📤</span>
-            <h3 class="text-lg font-semibold mt-2">IFC-Datei hochladen</h3>
-            <p class="text-gray-400">
-                Lade deine IFC-Datei hoch und extrahiere wiederverwendbare Bauteile.
-            </p>
-        </a>
-
-        <a href="catalog.html" class="bg-gray-800 shadow-md rounded-xl p-6 text-center hover:shadow-lg transition">
-            <span class="text-[#4CAF50] text-4xl">📑</span>
-            <h3 class="text-lg font-semibold mt-2">Bauteil-Katalog</h3>
-            <p class="text-gray-400">
-                Durchsuche den Bestand an wiederverwendbaren Bauelementen.
-            </p>
-        </a>
-
-        <a href="api.html" class="bg-gray-800 shadow-md rounded-xl p-6 text-center hover:shadow-lg transition">
-            <span class="text-orange-400 text-4xl">🔗</span>
-            <h3 class="text-lg font-semibold mt-2">API-Zugang</h3>
-            <p class="text-gray-400">
-                Nutze unsere API, um Bauteile in dein Design zu integrieren.
-            </p>
-        </a>
-    </div>
 
 </body>
 </html>
+

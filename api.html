@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IFC Reuse Platform</title>
+    <title>API-Zugang</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css">
     <style>
         .dropdown-content {
             display: none;
@@ -14,6 +13,10 @@
             background-color: #2d3748;
             min-width: 150px;
             z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: none; /* Deshabilitar hover */
         }
 
         .dropdown.active .dropdown-content {
@@ -46,7 +49,6 @@
                 <a href="about.html" class="text-[#F1FAEE] hover:text-[#4CAF50]">Über Uns</a>
             </nav>
         </div>
-
         <div class="dropdown relative">
             <button onclick="toggleDropdown(event)" class="text-[#F1FAEE] hover:text-[#4CAF50]">👤 Benutzer</button>
             <div class="dropdown-content bg-gray-700 rounded shadow-lg">
@@ -57,46 +59,27 @@
         </div>
     </header>
 
-    <section class="text-center mt-12">
-        <h2 class="text-4xl font-bold text-[#F1FAEE]">
-            Finde wiederverwendbare Bauteile für dein Projekt
-        </h2>
-        <p class="text-gray-400 mt-2">
-            Nachhaltiges Bauen durch digitale Katalogisierung von IFC-Bauteilen.
-        </p>
+    <section class="max-w-2xl mx-auto mt-12 bg-gray-800 p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold text-[#F1FAEE] text-center">API-Zugang</h2>
+        <p class="text-gray-400 text-center">Nutze unsere API, um IFC-Daten in deine Anwendungen zu integrieren.</p>
+
+        <h3 class="text-lg font-semibold mt-4">Beispiel-Endpunkt:</h3>
+        <div class="bg-gray-700 p-3 rounded">
+            <code class="text-[#F1FAEE]">GET /api/components?type=door</code>
+        </div>
+
+        <h3 class="text-lg font-semibold mt-4">Antwort:</h3>
+        <pre class="bg-gray-700 p-3 rounded text-sm text-[#F1FAEE]">
+{
+    "id": 123,
+    "name": "Holztür",
+    "dimensions": "90x200cm",
+    "location": "Hamburg"
+}
+        </pre>
+
+        <button class="mt-4 bg-[#4CAF50] text-white px-4 py-2 rounded">API testen</button>
     </section>
-
-    <div class="mt-6 flex justify-center">
-        <input type="text" placeholder="Suche nach Material, Größe, Standort..."
-            class="w-1/2 border border-gray-600 bg-gray-700 text-[#F1FAEE] rounded-lg p-2">
-        <button class="ml-2 bg-[#4CAF50] text-white px-4 py-2 rounded-lg">🔍</button>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 px-6">
-        <a href="upload.html" class="bg-gray-800 shadow-md rounded-xl p-6 text-center hover:shadow-lg transition">
-            <span class="text-blue-400 text-4xl">📤</span>
-            <h3 class="text-lg font-semibold mt-2">IFC-Datei hochladen</h3>
-            <p class="text-gray-400">
-                Lade deine IFC-Datei hoch und extrahiere wiederverwendbare Bauteile.
-            </p>
-        </a>
-
-        <a href="catalog.html" class="bg-gray-800 shadow-md rounded-xl p-6 text-center hover:shadow-lg transition">
-            <span class="text-[#4CAF50] text-4xl">📑</span>
-            <h3 class="text-lg font-semibold mt-2">Bauteil-Katalog</h3>
-            <p class="text-gray-400">
-                Durchsuche den Bestand an wiederverwendbaren Bauelementen.
-            </p>
-        </a>
-
-        <a href="api.html" class="bg-gray-800 shadow-md rounded-xl p-6 text-center hover:shadow-lg transition">
-            <span class="text-orange-400 text-4xl">🔗</span>
-            <h3 class="text-lg font-semibold mt-2">API-Zugang</h3>
-            <p class="text-gray-400">
-                Nutze unsere API, um Bauteile in dein Design zu integrieren.
-            </p>
-        </a>
-    </div>
 
 </body>
 </html>
